@@ -1,0 +1,8 @@
+{
+  "name": "bikeanjo",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.2"
+  }
+}
