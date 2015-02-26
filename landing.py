@@ -28,12 +28,28 @@ d(  # configure django
     STATICFILES_DIRS=['static', ],
 )
 
+var = {'msg': time.time(),
+       'objs': '',
+       'paises': '5',
+       'cidades': '20',
+       'pedidos': '3000',
+       'anjos': '9500',
+       }
 
-@d('/', name='index')
-def home(request):
-    import time
-    return 'index.html', {'msg': time.time(),
-                          'objs': ''}
+
+@d('/')
+def index(request):
+    return 'index.html', var
+
+
+@d('/en/')
+def index_en(request):
+    return 'index-en.html', var
+
+
+@d('/es/')
+def index_es(request):
+    return 'index-es.html', var
 
 
 @d('/view_template/<word:name>', name='view_template')  # named urls

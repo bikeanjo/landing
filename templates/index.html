@@ -77,19 +77,19 @@
                 <h2>Nossa comunidade não para de crescer</h2>
             </header>
             <div class="box col-xs-6 col-md-3">
-                <span class="number">7.555</span>
+                <span class="number">{{ anjos }}</span>
                 <span class="info">Bike Anjos</span>
             </div>
             <div class="box col-xs-6 col-md-3">
-                <span class="number">365</span>
+                <span class="number">{{ pedidos }}</span>
                 <span class="info">Pedidos</span>
             </div>
             <div class="box col-xs-6 col-md-3">
-                <span class="number">69</span>
-                <span class="info">cidade</span>
+                <span class="number">{{ cidades }}</span>
+                <span class="info">cidades</span>
             </div>
             <div class="box col-xs-6 col-md-3">
-                <span class="number">25</span>
+                <span class="number">{{ paises }}</span>
                 <span class="info">Países</span>
             </div>
         </div>
@@ -107,7 +107,7 @@
 
     <section class="subscribe">
         <div class="container">
-            <div class="subscribe-form hidden">
+            <div class="subscribe-form">
                 <header>
                     <h2>Faça seu cadastro</h2>
                     <p>Fique sabendo primeiro do lançamento da nova plataforma</p>
@@ -119,7 +119,7 @@
                     </div>
                 </form>
             </div>
-            <div class="subscribe-success show">
+            <div class="subscribe-success" style="display:none;">
                 <header>
                     <h2>Cadastro efetuado com sucesso!</h2>
                     <p>Obrigado por fazer parte dessa comunidade</p>

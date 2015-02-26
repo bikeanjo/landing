@@ -11,7 +11,9 @@
                 success: function (data) {
                     console.log(data);
                     if (data.success) {
-                        alert('sucesso');
+                        $('.subscribe-form').hide();
+                        $('.subscribe-success').show();
+                        console.log('vai');
                     }
                 },
                 error: function(data) {
