@@ -107,16 +107,24 @@
 
     <section class="subscribe">
         <div class="container">
-            <header>
-                <h2>Faça seu cadastro</h2>
-                <p>Fique sabendo primeiro do lançamento da nova plataforma</p>
-            </header>
-            <form class="form-inline" action="/fhurl/" method="post" id="mailing">
-                <div class="form-group">
-                    <input type="email" placeholder="Digite seu e-mail" class="form-control" name="email">
-                    <input type="submit" class="btn btn-info btn-lg" value="Enviar">
-                </div>
-            </form>
+            <div class="subscribe-form hidden">
+                <header>
+                    <h2>Faça seu cadastro</h2>
+                    <p>Fique sabendo primeiro do lançamento da nova plataforma</p>
+                </header>
+                <form class="form-inline" action="/fhurl/" method="post" id="mailing">
+                    <div class="form-group">
+                        <input type="email" placeholder="Digite seu e-mail" class="form-control" name="email">
+                        <input type="submit" class="btn btn-info btn-lg" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div class="subscribe-success show">
+                <header>
+                    <h2>Cadastro efetuado com sucesso!</h2>
+                    <p>Obrigado por fazer parte dessa comunidade</p>
+                </header>
+            </div>
         </div>
     </section>
 
