@@ -27,10 +27,10 @@ d(  # configure django
     STATICFILES_DIRS=['static', ],
 )
 
-var = {'paises': '5',
-       'cidades': '20',
-       'pedidos': '3000',
-       'anjos': '9500',
+var = {'paises': '6',
+       'cidades': '231',
+       'pedidos': '5887',
+       'anjos': '1450',
        }
 
 
