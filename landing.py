@@ -5,8 +5,20 @@ import time
 d(  # configure django
     DEBUG=True,
     SMART_RETURN=True,
-    INSTALLED_APPS=['debug_toolbar',
-                    'django_extensions',
+    MIDDLEWARE_CLASSES=(
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        # 'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+    ),
+    INSTALLED_APPS=[
+                    # 'django_extensions',
+                    # 'django.contrib.auth',
+                    # 'django.contrib.contenttypes',
+                    # 'django.contrib.sessions',
+                    # 'django.contrib.admin',
+                    'debug_toolbar',
                     'crispy_forms',
 
                     # project apps
