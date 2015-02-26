@@ -11,11 +11,11 @@ d(  # configure django
 )
 
 
-@d('/', name='home')
+@d('/', name='index')
 def home(request):
     import time
-    return 'home.html', {'msg': time.time(),
-                         'objs': ''}
+    return 'index.html', {'msg': time.time(),
+                          'objs': ''}
 
 
 @d('/view_template/<word:name>', name='view_template')  # named urls

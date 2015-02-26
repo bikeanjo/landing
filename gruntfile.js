@@ -71,14 +71,14 @@ module.exports = function (grunt) {
                 dest: 'static/css/',
             },
         },
-        // copy: {
-        //     fontawesome: {
-        //         files: [
-        //             {expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'static/fonts/', filter: 'isFile',},
-        //             {expand: true, flatten: true, src: ['bower_components/font-awesome/css/*.css'], dest: 'static/css/', filter: 'isFile',},
-        //         ],
-        //     },
-        // },
+        copy: {
+            main: {
+                files: [
+                    {expand: true, flatten: false, cwd: 'assets/fonts/', src: ['**'], dest: 'static/fonts/', filter: 'isFile',},
+                    {expand: true, flatten: false, cwd: 'assets/imgs/', src: ['*'], dest: 'static/imgs/', filter: 'isFile',},
+                ],
+            },
+        },
         jshint: {
             options: {
                 reporter: require('jshint-stylish'),
@@ -136,6 +136,6 @@ module.exports = function (grunt) {
 
     // define default task
     grunt.registerTask('styles', ['less', 'rename',]);
-    grunt.registerTask('all', ['uglify', 'jshint', 'jscs', 'flake8', 'styles',])
+    grunt.registerTask('all', ['uglify', 'jshint', 'jscs', 'flake8', 'styles', 'copy'])
     grunt.registerTask('default', ['all', 'browserSync', 'watch',]);
 };
