@@ -326,9 +326,12 @@ section {
     height: 341px;
     padding: 0; 
     h2 {
-        font-size: 36px;
+        font-size: 33px;
         margin: 35px 0 20px;
         @media screen and (min-width: @screen-xs-min) {
+            font-size: 36px;
+        }
+        @media screen and (min-width: @screen-sm-min) {
             font-size: 44px;
             margin: 30px 0 20px;
         }
@@ -342,13 +345,18 @@ section {
     }
     .number {
         display: block;
-        font-size: 55px;
+        font-size: 44px;
         font-weight: 700;
-        line-height: 54px;
-        @media screen and (min-width: @screen-sm-min) {
-            font-size: 64px;
+        line-height: 34px;
+        @media screen and (min-width: @screen-xs-min) {
+            font-size: 54px;
+            line-height: 44px;
         }
         @media screen and (min-width: @screen-sm-min) {
+            font-size: 64px;
+            font-size: 54px;
+        }
+        @media screen and (min-width: @screen-md-min) {
             font-size: 84px;
             line-height: 74px;
         }
@@ -431,7 +439,7 @@ section {
             height: 55px;
             @media screen and (min-width: @screen-xs-min) {
                 display: inline-block;
-                width: 100px;
+                //width: 100px;
             }
         }
     }
@@ -459,7 +467,7 @@ section {
         height: 110px;
         margin: 0 auto 15px; 
         width: 110px;
-        @media screen and (min-width: @screen-md-min) {
+        @media screen and (min-width: @screen-lg-min) {
             float: left;
             margin-right: 15px;
             margin-bottom: 40px;
@@ -495,22 +503,11 @@ section {
             margin: 0 auto 50px;
             max-width: 280px;
         }
-        @media screen and (min-width: @screen-md-min) {
+        @media screen and (min-width: @screen-lg-min) {
             margin-bottom: 0;
             text-align: left;
             h3 {
                 margin-top: 15px;
-            }
-        }
-        @media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-            &:last-child {
-                .btn {
-                    float: right;
-                    padding: 6px 9px;
-                }
-            }
-            .btn {
-                font-size: 13px;
             }
         }
     }
