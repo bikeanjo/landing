@@ -5,7 +5,13 @@ import time
 d(  # configure django
     DEBUG=True,
     SMART_RETURN=True,
-    INSTALLED_APPS=['debug_toolbar', 'django_extensions', 'crispy_forms', ],
+    INSTALLED_APPS=['debug_toolbar',
+                    'django_extensions',
+                    'crispy_forms',
+
+                    # project apps
+                    'mailing',
+                    ],
     CRISPY_TEMPLATE_PACK='bootstrap3',
     STATICFILES_DIRS=['static', ],
 )
