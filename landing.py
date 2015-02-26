@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from importd import d
-import time
 
 d(  # configure django
     DEBUG=True,
@@ -28,9 +27,7 @@ d(  # configure django
     STATICFILES_DIRS=['static', ],
 )
 
-var = {'msg': time.time(),
-       'objs': '',
-       'paises': '5',
+var = {'paises': '5',
        'cidades': '20',
        'pedidos': '3000',
        'anjos': '9500',
@@ -54,7 +51,7 @@ def index_es(request):
 
 @d('/view_template/<word:name>', name='view_template')  # named urls
 def real_index(request, name):
-    return name+'.html', {'msg': time.time()}
+    return name+'.html'
 
 
 if __name__ == '__main__':
